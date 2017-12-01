@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "@webcomponents/custom-elements": "^1.0.0",
+    "angular-particle": "^1.0.4",
     "clarity-angular": "^0.10.16",
     "clarity-icons": "^0.10.16",
     "clarity-ui": "^0.10.16",

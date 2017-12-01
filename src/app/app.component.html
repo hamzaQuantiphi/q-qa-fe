@@ -1,0 +1,125 @@
+<!-- <particles [style]="style" [width]="width" [height]="height" [params]="params"></particles> -->
+<div class="container center-band">
+  <!-- title -->
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="page-title">Bi-directional Attention Flow</h1>
+      <h5 class="page-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie purus venenatis turpis auctor, a scelerisque
+        nunc efficitur. Donec et mi aliquam lectus facilisis accumsan bibendum in ante.</h5>
+    </div>
+  </div>
+  <!-- chat screen -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container padded-container">
+        <chat-screen [receivedQuestion]="sentQuestion"></chat-screen>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="chatbotForm" class="container padded-container">
+        <section class="form-block">
+          <div class="form-group row">
+            <div class="col-md-4">
+              <input type="text" id="category" placeholder="Select Category" size="15" formControlName="category" (click)="modalOpen($event)"
+                readonly>
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" id="category" placeholder="Write Question to ask" size="35" formControlName="question">
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-primary" (click)="sendQuestion()">ASK</button>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  <!-- References -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <h6 class="credits">
+          <span class="bolden">References :</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie purus venenatis turpis
+          auctor, a scelerisque nunc efficitur. Donec et mi aliquam lectus facilisis accumsan bibendum in ante.</h6>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="logo"></div>
+
+
+
+
+<clr-modal [(clrModalOpen)]="modalStatus">
+  <h3 class="modal-title">Select Category</h3>
+  <div class="modal-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              Category 1
+            </div>
+            <div class="card-block">
+              <ul class="list">
+                  <li *ngFor = "let subC of categories" (click)="getCategory(subC)" class="category-item">{{subC}}</li>
+                  
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              Category 2
+            </div>
+            <div class="card-block">
+                <ul class="list">
+                    <li *ngFor = "let subC of categories" (click)="getCategory(subC)" class="category-item">{{subC}}</li>
+                    
+                </ul>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Category 3
+              </div>
+              <div class="card-block">
+                <ul class="list">
+                    <li *ngFor = "let subC of categories" (click)="getCategory(subC)" class="category-item">{{subC}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                Category 4
+              </div>
+              <div class="card-block">
+                  <ul class="list">
+                      <li *ngFor = "let subC of categories" (click)="getCategory(subC)" class="category-item">{{subC}}</li>
+                  </ul>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+  
+</clr-modal>

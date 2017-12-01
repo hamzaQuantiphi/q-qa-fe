@@ -1,3 +1,17 @@
-<p>
-  chat-screen works!
-</p>
+<div class="box">
+    <!-- *ngIf="receivedQuestions.length > 0" -->
+  <div class="question-answer-wrapper" *ngFor="let question of receivedQuestions; let i = index">
+    <div class="question-wrapper">
+      <h6 class="question-head">Question {{i}}:</h6>
+      <h5 class="question-content">{{question}}</h5>
+    </div>
+
+    <div class="answer-wrapper">
+      <h6 class="answer-head">Answer :</h6>
+      <h5 class="question-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget quam ut enim interdum vehicula eget sit amet nulla.</h5>
+      
+    </div>
+  </div>
+
+
+</div>
